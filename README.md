@@ -2,6 +2,8 @@
 
 精心设计的 Obsidian 笔记应用样式主题集合，为你的笔记添加专业美观的视觉效果。
 
+🌐 **[在线演示网站](https://duran4000.github.io/obsidian-style-collection)**
+
 ## 包含的样式
 
 ### 1. Monokai Dark 代码块主题
