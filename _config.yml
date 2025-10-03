@@ -1,0 +1,16 @@
+title: Obsidian 样式集合
+description: 精心设计的 Obsidian 笔记应用样式主题
+baseurl: "/obsidian-style-collection"
+url: "https://duran4000.github.io"
+theme: jekyll-theme-cayman
+
+# GitHub Pages 设置
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 排除不需要的文件
+exclude:
+  - README.md
+  - .github/
+  - .gitignore
