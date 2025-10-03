@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidian 样式集合</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 8s ease infinite;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+        }
+
+        .styles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .style-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .style-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .style-card h2 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .style-card p {
+            color: #b0b0b0;
+            margin-bottom: 1.5rem;
+        }
+
+        .demo-section {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        .demo-title {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+        }
+
+        .footer a {
+            color: #4ecdc4;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .styles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 Obsidian 样式集合</h1>
+            <p>精心设计的 Obsidian 笔记应用样式主题</p>
+        </div>
+
+        <div class="styles-grid">
+            <div class="style-card">
+                <h2>Monokai Dark 代码块主题</h2>
+                <p>基于经典的 Monokai 配色方案，为 Obsidian 代码块提供专业的语法高亮显示。</p>
+
+                <div class="demo-section">
+                    <div class="demo-title">预览效果</div>
+                    <div style="background: #272822; border-radius: 6px; padding: 16px; font-family: 'Fira Code', monospace;">
+                        <div style="color: #f92672;">function</div> <div style="color: #a6e22e;">helloWorld</div>() {<br>
+                        &nbsp;&nbsp;<div style="color: #f92672;">const</div> <div style="color: #f8f8f2;">message</div> = <div style="color: #e6db74;">"Hello, World!"</div>;<br>
+                        &nbsp;&nbsp;<div style="color: #f92672;">console</div>.<div style="color: #a6e22e;">log</div>(<div style="color: #f8f8f2;">message</div>);<br>
+                        }<br>
+                        <div style="color: #75715e; font-style: italic;">// 这是一个注释</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-card">
+                <h2>彩虹辉光跑马灯分割线</h2>
+                <p>炫酷的彩虹色分割线，带有流动的跑马灯效果和动态辉光。</p>
+
+                <div class="demo-section">
+                    <div class="demo-title">预览效果</div>
+                    <div style="height: 30px; margin: 30px 0; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 100%; height: 2px;
+                            background: repeating-linear-gradient(90deg,
+                                #ff0000 0px, #ff0000 8px, transparent 8px, transparent 16px,
+                                #ff4000 16px, #ff4000 24px, transparent 24px, transparent 32px,
+                                #ff8000 32px, #ff8000 40px, transparent 40px, transparent 48px,
+                                #ffbf00 48px, #ffbf00 56px, transparent 56px, transparent 64px,
+                                #ffff00 64px, #ffff00 72px, transparent 72px, transparent 80px,
+                                #80ff00 80px, #80ff00 88px, transparent 88px, transparent 96px
+                            );
+                            background-size: 96px 100%;
+                            animation: demoMarquee 4s linear infinite;
+                        "></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>访问 <a href="https://github.com/duran4000/obsidian-style-collection">GitHub 仓库</a> 获取最新版本</p>
+            <p>© 2024 Obsidian 样式集合</p>
+        </div>
+    </div>
+
+    <style>
+        @keyframes demoMarquee {
+            0% { background-position: 0 0; }
+            100% { background-position: 96px 0; }
+        }
+    </style>
+</body>
+</html>
